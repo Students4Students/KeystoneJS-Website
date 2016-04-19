@@ -1,6 +1,9 @@
 # Forver ignore file
 .foreverignore
 
+# Ignore file uploads
+/public/uploads/*
+
 # Logs
 logs
 *.log
