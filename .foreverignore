@@ -1,3 +1,4 @@
 **/.git/**
 *.css
-/public/uploads/*
+public/uploads/*
+templates/views/*
