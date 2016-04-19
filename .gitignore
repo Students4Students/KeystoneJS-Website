@@ -1,6 +1,3 @@
-# Forver ignore file
-.foreverignore
-
 # Ignore file uploads
 /public/uploads/*
 
