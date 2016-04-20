@@ -1,0 +1,61 @@
+.navbar-brand {
+	font-family: @cursive-font;
+	display: none;
+}
+
+.navbar-brand-image{
+	max-height: @navbar-height - 10px;
+	margin: 5px;
+}
+
+#body {
+	margin-top: @navbar-height;
+}
+#hometop {
+	background: url("/images/page/homepage.jpg");
+	background-size: cover;
+	min-height: 100vh;
+	width: 100%;
+}
+
+.titletext {
+	font-family: @cursive-font;
+	color: #FFF;
+	font-weight: bold;
+}
+#titletext {
+	display: none;
+}
+
+@media (min-width: 300px) {
+	.navbar-brand {
+		display: inline-block;
+	}
+}
+
+@media (min-width: 500px) {
+	#titletext {
+		display: inline-block;
+	}
+	#titletext-short {
+		display: none;
+	}
+}
+
+@media (min-width: @screen-sm-min) {
+	#titletext {
+		font-size: 45px
+	}
+}
+
+@media (min-width: @screen-md-min) {
+	#titletext {
+		font-size: 60px;
+	}
+}
+
+@media (min-width: @screen-lg-min) {
+	#titletext {
+		font-size: 100px;
+	}
+}

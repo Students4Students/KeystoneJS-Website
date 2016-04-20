@@ -5,9 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Students4Students</title>
-		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 		<link href="/styles/site.min.css" rel="stylesheet">
-
+		<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" type="text/css">
 		{{!-- This file provides the default styling for the KeystoneJS Content Editor
 			- only renders when user is logged in and admin--}}
 		{{{isAdminEditorCSS user}}}
@@ -22,14 +22,14 @@
 	</head>
 	<body>
 		<div id="header">
-			<div class="container">
-				<div role="navigation" class="navbar navbar-default">
+				<div role="navigation" class="navbar navbar-default navbar-fixed-top">
 					<div class="container-fluid">
 						<div class="navbar-header">
 							<button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
 								<span class="sr-only">Toggle navigation</span>
 								<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 							</button>
+							<a href="/" class="pull-left"><img src="/images/logo-bg.jpg" class="navbar-brand-image img-rounded"></a>
 							<a href="/" class="navbar-brand">Students4Students</a>
 						</div>
 						<div class="collapse navbar-collapse">
@@ -67,7 +67,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
 		</div>
 		<div id="body">
 			<!--
