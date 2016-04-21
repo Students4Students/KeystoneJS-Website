@@ -52,4 +52,6 @@ keystone.set('nav', {
 	'files': ['files', 'folders']
 });
 
+keystone.set('signin redirect', '/');
+
 keystone.start();
