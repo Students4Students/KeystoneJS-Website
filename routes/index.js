@@ -18,6 +18,7 @@ exports = module.exports = function(app) {
 	app.get('/', routes.views.index);
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
-	app.get('/files', middleware.requireUser, routes.views.files)	
-	
+	app.get('/files', middleware.requireUser, routes.views.files);	
+	app.get('/whatwedo', routes.views.whatwedo);
+	app.get('/journey', routes.views.journey);
 };
