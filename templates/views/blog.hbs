@@ -10,9 +10,9 @@
 				<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
 					<h2><a href="{{postUrl slug}}">{{{title}}}</a></h2>
 					<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
-							{{#if author.name.first}}by {{author.name.first}}{{/if}}
+							{{#if author.name.first}}by {{author.name.first}} {{author.name.last}}{{/if}}
 					</p>
-					<p>{{{content.extended}}}</p>
+					<p>{{{content.brief}}}</p>
 					<p class="read-more"><a href="{{postUrl slug}}">Read more...</a></p>
 				</div>
 				{{/each}}
