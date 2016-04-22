@@ -19,7 +19,7 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "http://deployment.jakestockwin.co.uk/contact_me.php",
+                url: "https://deployment.jakestockwin.co.uk/contact_me.php",
                 type: "POST",
                 data: {
                     name: name,
