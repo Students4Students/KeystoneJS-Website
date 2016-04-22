@@ -1,0 +1,45 @@
+{{!< default}}
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<h1 class="text-center border">Get Involved - Schools</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<p><b>If you are concerned that some of your pupils may not be on track to achieve basic Maths and English skills before they leave school, and that they would benefit from one-on-one tutoring, Students4Students might be able to help!</b></p>
+
+			<p><i>"Their confidence has grown"</i> - Teacher from Windale Primary School</p>
+
+			<h3>Why use Students4Students?</h3>
+
+			<p>We understand that teachers are under a great deal of time-pressure, and can't always devote as much one-on-one time to pupils who aren't fulfilling the potential as they would like too. This is where our tutors come in. By reinforcing what has been learnt in lessons, or by pre-teaching material to increase pupils' confidence in the classroom, we believe we can help to make a real difference to the educational outcomes of those most in need.</p>
+
+			<p>Our tutors are high-achievers from some of the countries top universities and schools. They undergo a rigorous selection process, ensuring only the most capable and motivated students are chosen. Everyone is fully DBS checked before being accepted. After this, our selected tutors undergo extensive training covering teaching methods, child welfare, and professionalism as well as key learning tools and the importance of encouraging a growth mindset.</p>
+
+			<p>Moreover the Students4Students team work closely with schools and teachers to select tutoring topics. We do this to ensure that we are complimenting what you as a school are already providing the pupils. We believe that by complimenting your teaching our tutors will be able instill confidence and curiosity in your students, helping them to love learning and fulfill their own potential.</p>
+
+			<p><i>"They are engaged and excited to do the tuition"</i> - Teacher from Windale Primary School</p>
+		</div>
+	</div>
+	{{#if faqs}}
+	<div class="panel-group" id="accordion">
+		<div class="faqHeader"><h3>Frequently Asked Questions</h3></div>
+		{{#each faqs}}
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse{{displayOrder}}" aria-expanded="false">{{question}} <span class="caret"></span></a>
+					</h4>
+				</div>
+				<div id="collapse{{displayOrder}}" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+					<div class="panel-body">
+						{{{answer.html}}}
+					</div>
+				</div>
+			</div>
+		{{/each}}
+		</div>			
+	</div>
+	{{/if}}
+</div>

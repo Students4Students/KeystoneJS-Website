@@ -1,5 +1,5 @@
 var keystone = require('keystone');
-var TutorsFAQ = keystone.list('TutorsFAQ');
+var TutorFaq = keystone.list('TutorFaq');
 
 exports = module.exports = function(req, res) {
 	
@@ -14,7 +14,7 @@ exports = module.exports = function(req, res) {
 	locals.faqs = [];
 
 	view.on('init', function(next){
-		TutorsFAQ.find().exec(function (err, results) {
+		TutorFaq.model.find().exec(function (err, results) {
 			locals.faqs = results;
 			next(err);
 		});
@@ -22,6 +22,6 @@ exports = module.exports = function(req, res) {
 
 
 	// Render the view
-	view.render('index');
+	view.render('getinvolvedtutors');
 	
 };

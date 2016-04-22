@@ -6,18 +6,18 @@ var Types = keystone.Field.Types;
  * ===============
  */
 
-var TutorsFAQ = new keystone.List('TutorsFAQ', {
+var TutorFaq = new keystone.List('TutorFaq', {
 	map: { name: 'question' },
 	autokey: { path: 'slug', from: 'question', unique: true },
-	defaultSort: '-displayOrder'
+	defaultSort: 'displayOrder'
 });
 
-TutorsFAQ.add({
+TutorFaq.add({
 	question: { type: String, required: true },
 	answer: { type: Types.Markdown, required: true, initial: true },
 	displayOrder: { type: Types.Number, required: true, initial: true, unique: true }
 });
 
 
-TutorsFAQ.defaultColumns = 'question, order|20%';
-TutorsFAQ.register();
+TutorFaq.defaultColumns = 'question, displayOrder|20%';
+TutorFaq.register();

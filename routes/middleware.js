@@ -15,6 +15,10 @@ exports.initLocals = function(req, res, next) {
 			{ label: 'What We Do',		subkey: 'whatwedo',	href: "/whatwedo" },
 			{ label: 'Our Journey',		subkey: 'journey',		href: "/journey"	}
 										 ] },
+		{ label: 'Get Involved',	key: 'getinvolved',	pages: [
+			{ label: 'For Tutors',		subkey: 'getinvolvedtutors',	href: '/getinvolvedtutors'},
+			{ label: 'For Schools',		subkey: 'getinvolvedschools', 	href: '/getinvolvedschools'}
+										 ] },
 		{ label: 'Blog',		key: 'blog',		href: '/blog' }
 	];
 	

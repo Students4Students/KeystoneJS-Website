@@ -1,5 +1,5 @@
 var keystone = require('keystone');
-var SchoolsFAQ = keystone.list('SchoolsFAQ');
+var SchoolFaq = keystone.list('SchoolFaq');
 
 exports = module.exports = function(req, res) {
 	
@@ -14,7 +14,7 @@ exports = module.exports = function(req, res) {
 	locals.faqs = [];
 
 	view.on('init', function(next){
-		SchoolsFAQ.find().exec(function (err, results) {
+		SchoolFaq.model.find().exec(function (err, results) {
 			locals.faqs = results;
 			next(err);
 		});
@@ -22,6 +22,6 @@ exports = module.exports = function(req, res) {
 
 
 	// Render the view
-	view.render('index');
+	view.render('getinvolvedschools');
 	
 };

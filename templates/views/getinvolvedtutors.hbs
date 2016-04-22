@@ -1,0 +1,44 @@
+{{!< default}}
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<h1 class="text-center border">Get Involved - Tutors</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<h3>Are you interested in tutoring?</h3>
+			<img src="/images/tutor2.jpg" class="img-responsive img-rounded img-padded pull-right">
+			<p><b>Students4Students is always looking for new tutors. We rely upon people like you to make a difference; all of our tutors are volunteers and give up their free time once a week to make a difference in their local primary school. Put simply, without the time and dedication of our tutors we wouldn't be able to operate as a charity!</b></p>
+			
+			<img src="/images/tutor.jpg" class="img-responsive img-rounded img-padded pull-left">
+
+			<h3>Why get involved?</h3>
+			<p>If you are passionate about helping others and ensuring that all children have a fair chance at fulfilling their potential then Students4Students is for you. As a tutor for Students4Students you would be working one-to-one with a child in either maths or English. These one-to-one sessions provide an opportunity to really develop a child's skills in the subject. Not only this but the one-to-one format allows you to build a relationship with the child which means the tutoring goes beyond just the formal skills you are developing with the child; as a tutor you become a role model for the child you are paired with.</p>
+
+			<h3>What do tutors gain from the programme?</h3>
+
+			<p>At Students4Students we want to make sure that not only are we helping the children we work with but that we are also helping our tutors too. This means we provide comprehensive training where many of the skills we discuss and teach are applicable not just in tutoring but also in wider life. Moreover we ensure that our tutors get the most from their experiences by holding informal meetings so they can discuss these experiences with other tutors and members of the charity. In addition to new skills and experiences Students4Students also offers the opportunity to meet new people and make new friends.</p>
+		</div>
+	</div>
+	{{#if faqs}}
+	<div class="panel-group" id="accordion">
+		<div class="faqHeader"><h3>Frequently Asked Questions</h3></div>
+		{{#each faqs}}
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse{{displayOrder}}" aria-expanded="false">{{question}} <span class="caret"></span></a>
+					</h4>
+				</div>
+				<div id="collapse{{displayOrder}}" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+					<div class="panel-body">
+						{{{answer.html}}}
+					</div>
+				</div>
+			</div>
+		{{/each}}
+			
+	</div>
+	{{/if}}
+</div>
