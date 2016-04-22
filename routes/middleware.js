@@ -19,7 +19,8 @@ exports.initLocals = function(req, res, next) {
 			{ label: 'For Tutors',		subkey: 'getinvolvedtutors',	href: '/getinvolvedtutors'},
 			{ label: 'For Schools',		subkey: 'getinvolvedschools', 	href: '/getinvolvedschools'}
 										 ] },
-		{ label: 'Blog',		key: 'blog',		href: '/blog' }
+		{ label: 'Blog',		key: 'blog',		href: '/blog' },
+		{ label: 'Contact Us',		key: 'contact',		href: '/contact'}
 	];
 	
 	locals.user = req.user;

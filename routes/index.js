@@ -23,4 +23,5 @@ exports = module.exports = function(app) {
 	app.get('/journey', routes.views.journey);
 	app.get('/getinvolvedtutors', routes.views.getinvolvedtutors);
 	app.get('/getinvolvedschools', routes.views.getinvolvedschools);
+	app.get('/contact', routes.views.contact);
 };
