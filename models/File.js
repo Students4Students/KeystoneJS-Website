@@ -15,7 +15,7 @@ File.add({
 	name: { type: String, required: true },
 	file: {
 		type: Types.LocalFile,
-		dest: 'public/uploads',
+		dest: 'private/uploads',
 		prefix: '/files/',
 		filename: function(item, file){
 			return item.id + '.' + file.extension

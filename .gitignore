@@ -1,6 +1,6 @@
 # Ignore file uploads
 /public/uploads/*
-
+/private/uploads/*
 # Logs
 logs
 *.log

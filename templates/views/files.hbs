@@ -1,38 +1,51 @@
 {{!< default}}
 <div class="container">
+{{#if folders}}
+<div class="panel-group" id="accordion">
+	{{#each folders}}
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title title-faq">
+					<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse{{folder}}" aria-expanded="false">{{folder}} <span class="caret caret-faq"></span></a>
+				</h4>
+			</div>
+			<div id="collapse{{folder}}" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+				{{#if files}}
+				<table class="table">
+				<thead>
+				<tr><th>File</th><th>Last Modified</th><th>Created</th>
+				</tr>
+				{{#each files}}
+					<tr><td>
+					<a href="/file/{{_id}}" target="_blank">
+					<img src="http://www.stdicon.com/{{file.filetype}}" style="max-height: 20px;"> {{name}}
+					</a>
+					</td><td>{{updatedAt}} by {{updatedBy.name.first}} {{updatedBy.name.last}}</td><td>{{createdAt}} by {{createdBy.name.first}} {{createdBy.name.last}}</td></tr>
+				{{/each}}
+				</tbody>
+				</table>
+				{{else}}
+				<p>There are no files in this folder</p>
+				{{/if}}
+			</div>
+		</div>
+	{{/each}}
+</div>
+{{/if}}
+
+{{#if files}}
 <table class="table">
 <thead>
-<tr><th>File/Folder</th><th>Last Modified</th><th>Created</th>
-<t/tr>
-</thead>
-<tbody>
-{{#each folders}}
-<tr><td>
-<div class="dropdown">
-<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{folder}} <span class="caret"></span></button>
-	<ul class="dropdown-menu">
-	{{#if files}}
-	{{#each files}}
-		<li>
-			<a href="/public/uploads/{{file.filename}}">
-			<img src="http://www.stdicon.com/{{file.filetype}}" style="max-height: 20px;"> {{name}}
-			</a>
-		</li>
-	{{/each}}
-	{{else}}
-		<li class="disabled"><a href="#">There are no files in this folder</a></li>
-	{{/if}}
-	</ul>
-</div>
-</td></tr>
-{{/each}}
+<tr><th>File</th><th>Last Modified</th><th>Created</th>
+</tr>
 {{#each files}}
 <tr><td>
-<a href="/public/uploads/{{file.filename}}">
+<a href="/file/{{_id}}" target="_blank">
 <img src="http://www.stdicon.com/{{file.filetype}}" style="max-height: 20px;"> {{name}}
 </a>
 </td><td>{{updatedAt}} by {{updatedBy.name.first}} {{updatedBy.name.last}}</td><td>{{createdAt}} by {{createdBy.name.first}} {{createdBy.name.last}}</td></tr>
 {{/each}}
 </tbody>
 </table>
+{{/if}}
 </div>

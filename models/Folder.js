@@ -10,7 +10,7 @@ var Folder = new keystone.List('Folder', {
 });
 
 Folder.add({
-	name: { type: String, required: true }
+	name: { type: String, required: true, unique: true }
 });
 
 Folder.relationship({ ref: 'File', path: 'Folder' });

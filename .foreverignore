@@ -1,4 +1,5 @@
 **/.git/**
 *.css
 public/uploads/*
+private/uplaods/*
 templates/views/*
