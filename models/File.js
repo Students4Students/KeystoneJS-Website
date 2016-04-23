@@ -111,6 +111,7 @@ function convert(mimetype) {
     case 'application/x-tar':
     case 'application/x-tarz':
     case 'application/x-tgz':
+    case 'application/x-zip-compressed':
       return 'application/zip';
 
       // Executable types.
