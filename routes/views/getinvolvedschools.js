@@ -14,7 +14,7 @@ exports = module.exports = function(req, res) {
 	locals.faqs = [];
 
 	view.on('init', function(next){
-		SchoolFaq.model.find().exec(function (err, results) {
+		SchoolFaq.model.find().sort('displayOrder').exec(function (err, results) {
 			locals.faqs = results;
 			next(err);
 		});

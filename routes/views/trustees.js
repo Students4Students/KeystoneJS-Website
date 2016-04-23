@@ -11,7 +11,7 @@ exports = module.exports = function(req, res) {
 	
 	locals.trustees = [];
 	view.on('init', function(next) {
-		Trustee.model.find().exec(function(err, results) {
+		Trustee.model.find().sort('displayOrder').exec(function(err, results) {
 			locals.trustees = results;
 		});		
 		next();		

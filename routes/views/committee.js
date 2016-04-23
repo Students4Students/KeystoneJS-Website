@@ -11,7 +11,7 @@ exports = module.exports = function(req, res) {
 	
 	locals.members = [];
 	view.on('init', function(next) {
-		CommitteeMember.model.find().exec(function(err, results) {
+		CommitteeMember.model.find().sort('displayOrder').exec(function(err, results) {
 			locals.members = results;
 		});		
 		next();		
