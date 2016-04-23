@@ -6,13 +6,16 @@ var Types = keystone.Field.Types;
  * =====================
  */
 
-var Trustee = new keystone.List('Trustee');
+var Trustee = new keystone.List('Trustee', {
+	defaultSort: 'displayOrder'
+});
 
 Trustee.add({
 	name: { type: Types.Name, required: true, index: true },
 	position: { type: String, initial: true },
 	description: { type: Types.Markdown, initial: true, required: true },
-	picture: { type: Types.CloudinaryImage }
+	picture: { type: Types.CloudinaryImage },
+	displayOrder: { type: Types.CloudinaryImage }
 });
 
 
@@ -20,5 +23,5 @@ Trustee.add({
  * Registration
  */
 
-Trustee.defaultColumns = 'name';
+Trustee.defaultColumns = 'name, position|20%, displayOrder|20%';
 Trustee.register();

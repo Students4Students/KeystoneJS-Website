@@ -6,13 +6,16 @@ var Types = keystone.Field.Types;
  * =====================
  */
 
-var CommitteeMember = new keystone.List('CommitteeMember');
+var CommitteeMember = new keystone.List('CommitteeMember', {
+	defaultSort: 'displayOrder'
+});
 
 CommitteeMember.add({
 	name: { type: Types.Name, required: true, index: true },
 	position: { type: String, initial: true },
 	description: { type: Types.Markdown, initial: true, required: true },
-	picture: { type: Types.CloudinaryImage }
+	picture: { type: Types.CloudinaryImage },
+
 });
 
 
@@ -20,5 +23,5 @@ CommitteeMember.add({
  * Registration
  */
 
-CommitteeMember.defaultColumns = 'name';
+CommitteeMember.defaultColumns = 'name, position|20%, displayOrder|20%';
 CommitteeMember.register();
