@@ -22,6 +22,7 @@ exports = module.exports = function(req, res) {
 						res.redirect('/files');
 					}else{
 						res.contentType(result.file.filetype);
+						res.setHeader('Content-disposition', 'attachment; filename='+result.file.originalname);
 						res.send(data);
 					}
 				});				
