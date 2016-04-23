@@ -25,4 +25,6 @@ exports = module.exports = function(app) {
 	app.get('/getinvolvedtutors', routes.views.getinvolvedtutors);
 	app.get('/getinvolvedschools', routes.views.getinvolvedschools);
 	app.get('/contact', routes.views.contact);
+	app.get('/committee', routes.views.committee);
+	app.get('/trustees', routes.views.trustees);
 };

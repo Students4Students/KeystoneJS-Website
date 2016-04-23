@@ -12,8 +12,10 @@ exports.initLocals = function(req, res, next) {
 	locals.navLinks = [
 		{ label: 'Home',		key: 'home',		href: '/' },
 		{ label: 'About Us',		key: 'about',		pages: [
-			{ label: 'What We Do',		subkey: 'whatwedo',	href: "/whatwedo" },
-			{ label: 'Our Journey',		subkey: 'journey',		href: "/journey"	}
+			{ label: 'What We Do',		subkey: 'whatwedo',	href: '/whatwedo' 		},
+			{ label: 'Our Journey',		subkey: 'journey',		href: '/journey'	},
+			{ label: 'Meet the Committee',	subkey: 'committee',		href: '/committee' 	},
+			{ label: 'Meet the Trustees',	subkey: 'trustees',		href: '/trustees' 	}
 										 ] },
 		{ label: 'Get Involved',	key: 'getinvolved',	pages: [
 			{ label: 'For Tutors',		subkey: 'getinvolvedtutors',	href: '/getinvolvedtutors'},
