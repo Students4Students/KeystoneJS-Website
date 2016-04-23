@@ -6,10 +6,10 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h4 class="panel-title title-faq">
-					<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse{{folder}}" aria-expanded="false">{{folder}} <span class="caret caret-faq"></span></a>
+					<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse{{folder.key}}" aria-expanded="false">{{folder.name}} <span class="caret caret-faq"></span></a>
 				</h4>
 			</div>
-			<div id="collapse{{folder}}" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+			<div id="collapse{{folder.key}}" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
 				{{#if files}}
 				<table class="table">
 				<thead>

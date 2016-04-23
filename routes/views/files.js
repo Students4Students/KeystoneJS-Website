@@ -13,7 +13,7 @@ exports = module.exports = function(req, res) {
 		Folder.model.find().exec().then(function(folders) {
 			folders.forEach(function(folder) {
 				File.model.find().populate('folder createdBy updatedBy').where('folder', folder).exec().then(function(files){
-					item = { "folder": folder.name, "files": files };	
+					item = { "folder": folder, "files": files };	
 					locals.folders.push(item);
 				}, function(err) {
 					next(err);
