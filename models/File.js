@@ -1,5 +1,6 @@
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
+var mime = require('mime');
 
 /**
  * File Model
@@ -21,7 +22,16 @@ File.add({
 			return item.id + '.' + file.extension
 		},	
 	},
-	folder: { type: Types.Relationship, ref: 'Folder', many: false }
+	folder: { type: Types.Relationship, ref: 'Folder', many: false },
+	mimetype: { type: String, hidden: true }
+});
+
+File.schema.pre('save', function(next) {
+	console.log(this);
+	if(this.file.filetype !== undefined){
+		this.mimetype = mime.lookup(this.file.filetype);
+	}
+	next();
 });
 
 File.defaultColumns = 'name, folder, author, lastModifiedDate';
