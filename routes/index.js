@@ -27,4 +27,6 @@ exports = module.exports = function(app) {
 	app.get('/contact', routes.views.contact);
 	app.get('/committee', routes.views.committee);
 	app.get('/trustees', routes.views.trustees);
+	app.get('/account', middleware.requireUser, routes.views.account);
+	app.post('/account', middleware.requireUser, routes.views.account);
 };

@@ -1,0 +1,85 @@
+{{!<default}}
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<p>You are logged in as {{user.name.first}} {{user.name.last}} ({{user.email}}) ({{#if user.isAdmin}}Adminstrator{{else}}Member{{/if}}).</p>
+			<p>You may update your account details by clicking "Update your account details" below, or update your password by clicking "Change your password" below. Once you click submit, a message will appear telling you that your details have been changed correctly. If you have any problems, please contact an administrator to help you.</p>
+		</div>
+	</div>
+	<div class="row">
+	<div class="panel-group" id="accordion">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title title-faq">
+					<a class="accordion-toggle-collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseDetails" aria-expanded="false">
+						Update your account details <span class="caret caret-faq"></span>
+					</a>
+				</h4>
+			</div>
+			<div id="collapseDetails" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+			<div class="panel-body">
+			<form role="form" action="/account" method="POST">
+			<input type="hidden" name="action" value="updateDetails">
+			<input type="hidden" name="id" value="{{user._id}}">
+			<div class="form-group">
+				<label for="first">First Name:</label>
+				<input class="form-control" type="text" name="first" id="first" value="{{user.name.first}}">
+			</div>
+			<div class="form-group">
+				<label for="last">Last Name:</label>
+				<input class="form-control" type="text" name="last" id="last" value="{{user.name.last}}">
+			</div>
+			<div class="form-group">
+				<label for="email">Email Address:</label>
+				<input class="form-control" type="text" name="email" id="email" value="{{user.email}}">
+			</div>
+			<div class="form-group">
+				<label for="password">Please confirm your current password for authentication:</label>
+				<input class="form-control" type="password" id="password" name="password">
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+			</form>	
+			</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title title-faq">
+					<a class="accordion-toggle-collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapsePassword" aria-expanded="false">
+						Change your password <span class="caret caret-faq"></span>
+					</a>
+				</h4>
+			</div>
+			<div id="collapsePassword" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+			<div class="panel-body">
+			<form role="form" action="/account" method="POST">
+				<input type="hidden" name="action" value="updatePassword">
+				<input type="hidden" name="id" value="{{user._id}}">
+				<div class="form-group">
+					<label for="new">New Password:</label>
+					<input class="form-control" type="password" name="new" id="new">
+				</div>
+				<div class="form-group">
+					<label for="confirm">Confirm New Password:</label>
+					<input class="form-control" type="password" name="confirm" id="confirm">
+				</div>
+				<div class="form-group">
+					<label for="current">Please confirm your current password for authentication:</label>
+					<input class="form-control" type="password" name="current" id="current">
+				</div>
+				<button type="submit" class="btn btn-default">Submit</button>
+			</form>
+			</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<h4>Password Security:</h4>
+			<p>You connection to this website is server over a secure connection. In your address bar, you should see "https://...". The certificate is provided by <a href="https://letsencrypt.org/">letsencrpt</a>, a free SSL certificate issuer. You can see information on this certificate <a href="https://www.ssllabs.com/ssltest/analyze.html?d=students4students.org.uk&latest">here</a>, which will tell you we have an A rated certificate. </p>
+
+			<p>On top of this security, your passwords are automatically encryped on save, using <a href="https://en.wikipedia.org/wiki/Bcrypt">Bcrypt</a> with 2<sup>10</sup> key expansion rounds. If you have any questions, please contact Jake on <a href="mailto:admin@students4students.org.uk">admin@students4students.org.uk</a>, or fill in the form on the <a href="/contact">Contact Us</a> page, choosing "Website Problems" as your subject.<p>
+		</div>
+	</div>
+</div>
