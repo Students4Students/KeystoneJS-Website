@@ -2,4 +2,3 @@
 *.css
 public/uploads/*
 private/uploads/*
-templates/views/*
