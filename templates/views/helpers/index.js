@@ -202,7 +202,7 @@ module.exports = function() {
 		
 		if ((context) && (context.public_id)) {
 			var imageName = context.public_id.concat('.',context.format);
-			return cloudinary.url(imageName, options);
+			return cloudinary.url(imageName, options.hash);
 		}
 		else {
 			return null;
