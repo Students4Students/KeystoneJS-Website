@@ -10,7 +10,7 @@
 		<div class="col-md-6">
 			<h3>{{name.first}}  {{name.last}}{{#if position}}, {{position}}{{/if}}</h3>
 			{{#if picture.url}}
-				<img src="{{picture.secure_url}}" class="img-rounded img-responsive pull-left img-padded" style="height: 200px">
+				<img src="{{{cloudinaryUrl picture width=200 height=200 crop='fit' }}}" class="img-rounded img-responsive pull-left img-padded">
 			{{/if}}
 			{{{description.html}}}
 		</div>
