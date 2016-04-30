@@ -12,8 +12,8 @@
 					</h5>
 				</header>
 				<div class="post">
-					{{#if data.post.image.url}}
-						<img src="{{data.post.image.secure_url}}" class="img-responsive img-rounded pull-left img-padded">
+					{{#if data.post.image}}
+						<img src="{{{cloudinaryUrl data.post.image width=750 height=450 crop='fit' }}}" class="img-responsive">
 					{{/if}}
 					{{{data.post.content.extended}}}
 				</div>
