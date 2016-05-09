@@ -14,12 +14,14 @@ var File = new keystone.List('File', {
 File.add({
 	name: { type: String, required: true },
 	file: {
-		type: Types.LocalFile,
-		dest: 'private/uploads',
-		prefix: '/files/',
+		type: Types.S3File,
 		filename: function(item, file){
-			return item.id + '.' + file.extension
-		},	
+			return encodeURI(item._id + '-' + item.name);
+		},
+		format: function(item, file){
+			return '<pre>'+JSON.stringify(file, false, 2)+'</pre>'+
+						'<img src="'+file.url+'" style="max-width: 300px">'
+		}
 	},
 	folder: { type: Types.Relationship, ref: 'Folder', many: false },
 	mimetype: { type: String, hidden: true }
@@ -27,9 +29,7 @@ File.add({
 
 File.schema.pre('save', function(next) {
 	if(this.file.filetype !== undefined){
-		console.log(this.file.filetype);
 		this.mimetype = convert(this.file.filetype);
-		console.log(this.mimetype);
 	}
 	next();
 });
@@ -122,6 +122,6 @@ function convert(mimetype) {
 
     default:
       return mimetype;
-  }	
+  }
 
 }
