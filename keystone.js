@@ -30,7 +30,8 @@ keystone.init({
 	'auth': true,
 	'user model': 'User',
 	'cookie secret': process.env.COOKIE_SECRET,
-	'session store': 'mongo'
+	'session store': 'mongo',
+	'model prefix': 's4s'
 
 });
 
