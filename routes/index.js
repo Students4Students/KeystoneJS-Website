@@ -8,17 +8,17 @@ keystone.pre('render', middleware.flashMessages);
 
 // Import Route Controllers
 var routes = {
-	views: importRoutes('./views')
+	views: importRoutes('./views'),
 };
 
 // Setup Route Bindings
-exports = module.exports = function(app) {
-	
+exports = module.exports = function (app) {
+
 	// Views
 	app.get('/', routes.views.index);
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
-	app.get('/files', middleware.requireUser, routes.views.files);	
+	app.get('/files', middleware.requireUser, routes.views.files);
 	app.get('/file/:file', middleware.requireUser, routes.views.fileviewer);
 	app.get('/whatwedo', routes.views.whatwedo);
 	app.get('/journey', routes.views.journey);

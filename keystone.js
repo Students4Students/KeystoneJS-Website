@@ -21,8 +21,8 @@ keystone.init({
 		layoutsDir: 'templates/views/layouts',
 		partialsDir: 'templates/views/partials',
 		defaultLayout: 'default',
-		helpers: new require('./templates/views/helpers')(),
-		extname: '.hbs'
+		helpers: require('./templates/views/helpers')(),
+		extname: '.hbs',
 	}).engine,
 
 	'auto update': true,
@@ -31,7 +31,7 @@ keystone.init({
 	'user model': 'User',
 	'cookie secret': process.env.COOKIE_SECRET,
 	'session store': 'mongo',
-	'model prefix': 's4s'
+	'model prefix': 's4s',
 
 });
 
@@ -41,17 +41,17 @@ keystone.set('locals', {
 	_: require('underscore'),
 	env: keystone.get('env'),
 	utils: keystone.utils,
-	editable: keystone.content.editable
+	editable: keystone.content.editable,
 });
 
 keystone.set('routes', require('./routes'));
 
 keystone.set('nav', {
-	'posts': ['posts', 'post-categories'],
-	'users': 'users',
-	'people': ['committee-members', 'trustees'],
-	'files': ['files', 'folders'],
-	'faqs': ['tutor-faqs', 'school-faqs']
+	posts: ['posts', 'post-categories'],
+	users: 'users',
+	people: ['committee-members', 'trustees'],
+	files: ['files', 'folders'],
+	faqs: ['tutor-faqs', 'school-faqs'],
 });
 
 keystone.set('signin redirect', '/');

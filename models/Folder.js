@@ -6,11 +6,11 @@ var keystone = require('keystone');
  */
 
 var Folder = new keystone.List('Folder', {
-	autokey: { from: 'name', path: 'key', unique: true }
+	autokey: { from: 'name', path: 'key', unique: true },
 });
 
 Folder.add({
-	name: { type: String, required: true, unique: true }
+	name: { type: String, required: true, unique: true },
 });
 
 Folder.relationship({ ref: 'File', path: 'Folder' });

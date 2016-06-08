@@ -7,7 +7,7 @@ var Types = keystone.Field.Types;
  */
 
 var Trustee = new keystone.List('Trustee', {
-	defaultSort: 'displayOrder'
+	defaultSort: 'displayOrder',
 });
 
 Trustee.add({
@@ -15,7 +15,7 @@ Trustee.add({
 	position: { type: String, initial: true },
 	description: { type: Types.Markdown, initial: true, required: true },
 	picture: { type: Types.CloudinaryImage },
-	displayOrder: { type: Types.Number }
+	displayOrder: { type: Types.Number },
 });
 
 
