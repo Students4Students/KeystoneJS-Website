@@ -51,8 +51,8 @@
         "path": ""
       },
       "desiredCapabilities": {
-        "name": "test-firefox",
-        "browserName": "firefox",
+        "name": "test-${BROWSER}",
+        "browserName": "${BROWSER}",
         "tunnel-identifier": "${TRAVIS_JOB_NUMBER}"
       },
       "selenium": {
