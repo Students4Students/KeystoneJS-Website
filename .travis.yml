@@ -2,8 +2,12 @@ language: node_js
 node_js:
   - "6"
 
-script:
+before_script:
   - npm run lint
+  - sleep 15
+
+script:
+  - npm run test-e2e-travis
 
 cache:
   directories:

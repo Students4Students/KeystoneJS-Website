@@ -16,7 +16,8 @@
     "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "eslint": "2.11.1"
+    "eslint": "2.11.1",
+    "nightwatch": "^0.9.3"
   },
   "engines": {
     "node": ">=0.10.22",
@@ -24,6 +25,8 @@
   },
   "scripts": {
     "start": "node keystone.js",
+    "test-e2e": "node keystone.js --test",
+    "test-e2e-travis": "if [ -n \"$SAUCE_ACCESS_KEY\" ]; then node keystone.js --test --env saucelabs-travis; fi",
     "lint": "eslint ."
   },
   "main": "keystone.js"
