@@ -133,6 +133,11 @@
         "javascriptEnabled" : true,
         "acceptSslCerts" : true
       }
+    },
+    "opera": {
+      "browserName": "opera",
+      "javascriptEnabled": true,
+      "acceptSslCerts": true
     }
   }
 }
