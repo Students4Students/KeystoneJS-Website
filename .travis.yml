@@ -7,7 +7,7 @@ env:
   - BROWSER='chrome'
   - BROWSER='safari'
   - BROWSER='internet explorer'
-  - BROWSER='opera'
+
 before_script:
   - npm run lint
   - sleep 15
