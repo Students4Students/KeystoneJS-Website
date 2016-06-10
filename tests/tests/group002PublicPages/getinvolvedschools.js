@@ -7,7 +7,7 @@ module.exports = {
 	'after': function (browser) {
 		browser.end();
 	},
-	'Assert Home Page UI': function (browser) {
+	'Assert Get Involved - Schools Page UI': function (browser) {
 		browser.getinvolvedschools.assertUI();
 	},
 };
