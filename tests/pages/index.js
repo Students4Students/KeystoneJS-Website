@@ -1,19 +1,22 @@
 var keystone = require('keystone');
 
 module.exports = {
-	url: 'http://' + keystone.get('host') + ':' + keystone.get('port'),
+	url: 'http://' + keystone.get('host') + ':' + keystone.get('port') + '/',
 	elements: {
+		identifier: '#indexIdentifier',
 		navbar: '.navbar-default',
-		headerBrand: '.navbar-brand',
+		navbarBrand: '.navbar-brand',
 		hometop: '#hometop',
 	},
 	commands: [{
 		assertUI: function () {
+			this.expect.element('@navbar').to.be.visible;
+			this.expect.element('@navbarBrand').to.be.visible;
 			this.expect.element('@hometop').to.be.visible;
 			return this;
 		},
 		waitForPageLoad: function () {
-			this.waitForElementVisible('@hometop');
+			this.waitForElementPresent('@identifier');
 			return this;
 		},
 	}],

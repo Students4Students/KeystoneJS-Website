@@ -1,13 +1,13 @@
 module.exports = {
 	'before': function (browser) {
-		browser.home = browser.page.home();
-		browser.home.navigate();
-		browser.home.waitForPageLoad();
+		browser.index = browser.page.index();
+		browser.index.navigate();
+		browser.index.waitForPageLoad();
 	},
 	'after': function (browser) {
 		browser.end();
 	},
 	'Assert Home Page UI': function (browser) {
-		browser.home.assertUI();
+		browser.index.assertUI();
 	},
 };

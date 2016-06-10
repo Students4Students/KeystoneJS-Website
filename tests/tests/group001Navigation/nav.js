@@ -1,86 +1,62 @@
-var keystone = require('keystone');
-var baseURL = 'http://' + keystone.get('host') + ':' + keystone.get('port');
-
 module.exports = {
 	'before': function (browser) {
-		browser.nav = browser.page.navbar();
-		browser.nav.navigate();
-		browser.nav.waitForPageLoad();
+		browser.app = browser.page.app();
+		browser.app.navigate();
+		browser.app.waitForPageLoad();
 	},
 	'after': function (browser) {
 		browser.end();
 	},
 	'Navbar should initially display correctly': function (browser) {
-		browser.nav.assertUI();
+		browser.app.assertUI();
 
 	},
 	'Dropdowns should display correctly': function (browser) {
-		browser.nav.clickLink('about');
-		browser.nav.checkDropdown([
+		browser.app.clickLink('about');
+		browser.app.checkDropdown([
 			'What We Do',
 			'Our Journey',
 			'Meet the Committee',
 			'Meet the Trustees',
 		]);
 
-		browser.nav.clickLink('involved');
-		browser.nav.checkDropdown([
+		browser.app.clickLink('involved');
+		browser.app.checkDropdown([
 			'For Tutors',
 			'For Schools',
 		]);
 	},
 	'Links shoud lead to the correct URLs': function (browser) {
-		// TODO This needs improving. We shouldn't need to  pause.
-		// If each page had an identifying marker, we could call e.g.
-		// browser.home.waitForPageLoad() for each page.
+		browser.app.clickLink('home');
+		browser.page.index().waitForPageLoad();
 
-		browser.nav.clickLink('home');
-		assertURL(browser, '/');
-		browser.pause(500);
+		browser.app.clickLink('about');
+		browser.app.clickOpenDropdownLink('first');
+		browser.page.whatwedo().waitForPageLoad();
+		browser.app.clickLink('about');
+		browser.app.clickOpenDropdownLink('second');
+		browser.page.journey().waitForPageLoad();
+		browser.app.clickLink('about');
+		browser.app.clickOpenDropdownLink('third');
+		browser.page.committee().waitForPageLoad();
+		browser.app.clickLink('about');
+		browser.app.clickOpenDropdownLink('fourth');
+		browser.page.trustees().waitForPageLoad();
 
-		browser.nav.clickLink('about');
-		browser.nav.clickOpenDropdownLink('first');
-		assertURL(browser, '/whatwedo');
-		browser.pause(500);
-		browser.nav.clickLink('about');
-		browser.nav.clickOpenDropdownLink('second');
-		assertURL(browser, '/journey');
-		browser.pause(500);
-		browser.nav.clickLink('about');
-		browser.nav.clickOpenDropdownLink('third');
-		assertURL(browser, '/committee');
-		browser.pause(500);
-		browser.nav.clickLink('about');
-		browser.nav.clickOpenDropdownLink('fourth');
-		assertURL(browser, '/trustees');
-		browser.pause(500);
+		browser.app.clickLink('involved');
+		browser.app.clickOpenDropdownLink('first');
+		browser.page.getinvolvedtutors().waitForPageLoad();
+		browser.app.clickLink('involved');
+		browser.app.clickOpenDropdownLink('second');
+		browser.page.getinvolvedschools().waitForPageLoad();
 
-		browser.nav.clickLink('involved');
-		browser.nav.clickOpenDropdownLink('first');
-		assertURL(browser, '/getinvolvedtutors');
-		browser.pause(500);
-		browser.nav.clickLink('involved');
-		browser.nav.clickOpenDropdownLink('second');
-		assertURL(browser, '/getinvolvedschools');
-		browser.pause(500);
+		browser.app.clickLink('blog');
+		browser.page.blog().waitForPageLoad();
 
-		browser.nav.clickLink('blog');
-		assertURL(browser, '/blog');
-		browser.pause(500);
+		browser.app.clickLink('contact');
+		browser.page.contact().waitForPageLoad();
 
-		browser.nav.clickLink('contact');
-		assertURL(browser, '/contact');
-		browser.pause(500);
-
-		browser.nav.clickLink('signIn');
-		assertURL(browser, '/keystone/signin');
-		browser.pause(500);
+		browser.app.clickLink('signIn');
+		browser.page.signin().waitForPageLoad();
 	},
 };
-
-function assertURL (browser, url) {
-	browser.url(function (result) {
-		this.assert.equal(result.value, baseURL + url, 'URL Correct');
-	});
-	return this;
-}
