@@ -96,7 +96,7 @@ function checkKeystoneReady (done) {
 			console.log('tests: KeystoneJS does not appear ready!');
 			done(err);
 		}
-	})
+	});
 }
 
 /*
@@ -110,10 +110,10 @@ function runSelenium (done) {
 	selenium = child_process.spawn('java',
 		[
 			'-jar',
-			path.join(__dirname, 'tests/bin/selenium-server-standalone-2.53.0.jar')
+			path.join(__dirname, 'tests/bin/selenium-server-standalone-2.53.0.jar'),
 		],
 		{
-			stdio: ['ignore', 'pipe', 'pipe']
+			stdio: ['ignore', 'pipe', 'pipe'],
 		});
 	var running = false;
 
@@ -164,7 +164,7 @@ function runKeystone (cb) {
 	});
 }
 
-function test() {
+function test () {
 	async.series([
 
 		function (cb) {
