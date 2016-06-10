@@ -9,7 +9,7 @@ module.exports = {
 	},
 	commands: [{
 		assertUI: function () {
-			this.expect.element('@navbar').to.be.visible;
+			this.expect.element('@hometop').to.be.visible;
 			return this;
 		},
 		waitForPageLoad: function () {
