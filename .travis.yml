@@ -19,3 +19,5 @@ notifications:
 
 addons:
   sauce_connect: true
+  
+services: mongodb

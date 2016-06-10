@@ -26,7 +26,7 @@
   "scripts": {
     "start": "node keystone.js",
     "test-e2e": "node keystone.js --test",
-    "test-e2e-travis": "if [ -n \"$SAUCE_ACCESS_KEY\" ]; then node keystone.js --test --env saucelabs-travis; fi",
+    "test-e2e-travis": "if [ -n \"$SAUCE_ACCESS_KEY\" ]; then node keystone.js --test --travis --env saucelabs-travis; fi",
     "lint": "eslint ."
   },
   "main": "keystone.js"
