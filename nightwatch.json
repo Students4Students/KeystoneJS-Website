@@ -53,6 +53,7 @@
       "desiredCapabilities": {
         "name": "test-${BROWSER}",
         "browserName": "${BROWSER}",
+        "platform": "${PLATFORM}",
         "tunnel-identifier": "${TRAVIS_JOB_NUMBER}"
       },
       "selenium": {
