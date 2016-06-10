@@ -1,3 +1,8 @@
+var travis = !(process.argv.indexOf('--travis') === -1);
+if (!travis) {
+	require('dotenv').load();
+}
+
 // Require keystone
 var keystone = require('keystone');
 var handlebars = require('express-handlebars');
@@ -7,13 +12,7 @@ var path = require('path');
 var selenium = null;
 var async = require('async');
 var request = require('superagent');
-var travis = !(process.argv.indexOf('--travis') === -1);
 var testing = !(process.argv.indexOf('--test') === -1);
-
-if (!travis) {
-	require('dotenv').load();
-}
-
 
 keystone.init({
 
@@ -185,7 +184,17 @@ function test () {
 		},
 
 	], function (err) {
-		selenium.kill('SIGHUP');
-		process.exit();
+		var exitProcess = false;
+		if (err) {
+			console.error('tests: ' + err);
+			exitProcess = true;
+		}
+		if (selenium) {
+			selenium.kill('SIGHUP');
+			exitProcess = true;
+		}
+		if (exitProcess) {
+			process.exit();
+		}
 	});
 }

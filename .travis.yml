@@ -5,6 +5,9 @@ node_js:
 env:
   - BROWSER=firefox
   - BROWSER=chrome
+  - BROWSER=chrome-win32
+  - BROWSER=chrome-mac32
+  - BROWSER=safari
 
 before_script:
   - npm run lint

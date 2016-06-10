@@ -126,6 +126,13 @@
       "cli_args": {
         "webdriver.chrome.driver": "test/e2e/drivers/chrome/linux32/chromedriver"
       }
+    },
+    "safari": {
+      "desiredCapabilities" : {
+        "browserName" : "safari",
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true
+      }
     }
   }
 }
