@@ -36,45 +36,45 @@ module.exports = {
 
 		browser.nav.clickLink('home');
 		assertURL(browser, '/');
-		browser.pause(50);
+		browser.pause(500);
 
 		browser.nav.clickLink('about');
 		browser.nav.clickOpenDropdownLink('first');
 		assertURL(browser, '/whatwedo');
-		browser.pause(50);
+		browser.pause(500);
 		browser.nav.clickLink('about');
 		browser.nav.clickOpenDropdownLink('second');
 		assertURL(browser, '/journey');
-		browser.pause(50);
+		browser.pause(500);
 		browser.nav.clickLink('about');
 		browser.nav.clickOpenDropdownLink('third');
 		assertURL(browser, '/committee');
-		browser.pause(50);
+		browser.pause(500);
 		browser.nav.clickLink('about');
 		browser.nav.clickOpenDropdownLink('fourth');
 		assertURL(browser, '/trustees');
-		browser.pause(50);
+		browser.pause(500);
 
 		browser.nav.clickLink('involved');
 		browser.nav.clickOpenDropdownLink('first');
 		assertURL(browser, '/getinvolvedtutors');
-		browser.pause(50);
+		browser.pause(500);
 		browser.nav.clickLink('involved');
 		browser.nav.clickOpenDropdownLink('second');
 		assertURL(browser, '/getinvolvedschools');
-		browser.pause(50);
+		browser.pause(500);
 
 		browser.nav.clickLink('blog');
 		assertURL(browser, '/blog');
-		browser.pause(50);
+		browser.pause(500);
 
 		browser.nav.clickLink('contact');
 		assertURL(browser, '/contact');
-		browser.pause(50);
+		browser.pause(500);
 
 		browser.nav.clickLink('signIn');
 		assertURL(browser, '/keystone/signin');
-		browser.pause(50);
+		browser.pause(500);
 	},
 };
 
