@@ -1,7 +1,3 @@
-// Simulate config options from your production environment by
-// customising the .env file in your project's root folder.
-require('dotenv').load();
-
 // Require keystone
 var keystone = require('keystone');
 var handlebars = require('express-handlebars');
@@ -11,7 +7,12 @@ var path = require('path');
 var selenium = null;
 var async = require('async');
 var request = require('superagent');
+var travis = !(process.argv.indexOf('--travis') === -1);
 var testing = !(process.argv.indexOf('--test') === -1);
+
+if (!travis) {
+	require('dotenv').load();
+}
 
 
 keystone.init({
