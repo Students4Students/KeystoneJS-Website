@@ -16,7 +16,7 @@
     "underscore": "1.8.3"
   },
   "devDependencies": {
-    "eslint": "2.13.1",
+    "eslint": "3.0.1",
     "nightwatch": "0.9.4"
   },
   "engines": {
