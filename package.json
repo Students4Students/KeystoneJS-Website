@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "eslint": "3.0.1",
-    "nightwatch": "0.9.4"
+    "nightwatch": "0.9.5"
   },
   "engines": {
     "node": ">=0.10.22",
