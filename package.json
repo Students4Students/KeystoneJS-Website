@@ -6,7 +6,7 @@
     "async": "1.5.2",
     "aws-sdk": "2.4.6",
     "cloudinary": "1.4.1",
-    "connect-mongo": "1.2.0",
+    "connect-mongo": "1.2.1",
     "dotenv": "2.0.0",
     "express-handlebars": "3.0.0",
     "forever": "0.15.2",
