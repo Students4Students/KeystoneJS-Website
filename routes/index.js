@@ -29,4 +29,5 @@ exports = module.exports = function (app) {
 	app.get('/trustees', routes.views.trustees);
 	app.get('/account', middleware.requireUser, routes.views.account);
 	app.post('/account', middleware.requireUser, routes.views.account);
+	app.post('/mail', routes.views.mail);
 };
