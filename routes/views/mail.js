@@ -8,7 +8,7 @@ var config = {
 	authMethod: 'LOGIN',
 	auth: {
 		user: 'noreply@jakestockwin.co.uk',
-		pass: 'Vu8VQprEw4kWq4g7AWxu',
+		pass: process.env.ZOHO_PASSWORD,
 	},
 };
 
