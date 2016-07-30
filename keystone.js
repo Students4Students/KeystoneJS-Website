@@ -27,6 +27,14 @@ keystone.init({
 	'host': process.env.KEYSTONEJS_HOST || 'localhost',
 	'port': process.env.KEYSTONEJS_PORT || 3000,
 
+	'letsencrypt': (process.env.NODE_ENV === 'production') ? {
+		email: 'jstockwin@gmail.com',
+		domains: ['www.students4students.org.uk', 'students4students.org.uk'],
+		register: true,
+		tos: true,
+		production: true,
+	} : false,
+
 	'custom engine': handlebars.create({
 		layoutsDir: 'templates/views/layouts',
 		partialsDir: 'templates/views/partials',
