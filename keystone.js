@@ -24,7 +24,6 @@ keystone.init({
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'hbs',
-	'host': process.env.KEYSTONEJS_HOST || 'localhost',
 
 	'custom engine': handlebars.create({
 		layoutsDir: 'templates/views/layouts',
@@ -38,11 +37,10 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
-	'cookie secret': process.env.COOKIE_SECRET,
 	'model prefix': 's4s',
 });
 
-if (keystone.get('ENV') === 'production') {
+if (keystone.get('env') === 'production') {
 	keystone.set('session store', 'connect-mongo');
 }
 
