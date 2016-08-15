@@ -13,7 +13,7 @@ var selenium = null;
 var async = require('async');
 var request = require('superagent');
 var testing = !(process.argv.indexOf('--test') === -1);
-var host = process.env.HOST || 'localhost';
+var host = process.env.IP || 'localhost';
 var port = process.env.PORT || '3000';
 
 keystone.init({
