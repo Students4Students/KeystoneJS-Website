@@ -25,7 +25,6 @@ keystone.init({
 	'views': 'templates/views',
 	'view engine': 'hbs',
 	'host': process.env.KEYSTONEJS_HOST || 'localhost',
-	'port': process.env.KEYSTONEJS_PORT || 3000,
 
 	'custom engine': handlebars.create({
 		layoutsDir: 'templates/views/layouts',
