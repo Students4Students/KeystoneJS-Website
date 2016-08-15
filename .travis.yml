@@ -19,7 +19,7 @@ deploy:
   provider: script
   script: deployment/deploy.sh
   on:
-    condition: '"$TRAVIS_PULL_REQUEST" = "false"'
+    condition: '"$BROWSER" = "chrome"'
 
 cache:
   directories:
