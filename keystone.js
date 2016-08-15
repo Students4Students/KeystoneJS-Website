@@ -13,6 +13,8 @@ var selenium = null;
 var async = require('async');
 var request = require('superagent');
 var testing = !(process.argv.indexOf('--test') === -1);
+var host = process.env.HOST || 'localhost';
+var port = process.env.PORT || '3000';
 
 keystone.init({
 
@@ -81,9 +83,9 @@ function checkKeystoneReady (done) {
 		interval: 3000,
 	}, function (done, result) {
 		console.log('Checking if KeystoneJS ready for request');
-		console.log('http://' + keystone.get('host') + ':' + keystone.get('port') + '/keystone');
+		console.log('http://' + host + ':' + port + '/keystone');
 		request
-			.get('http://' + keystone.get('host') + ':' + keystone.get('port') + '/keystone')
+			.get('http://' + host + ':' + port + '/keystone')
 			.end(done);
 	}, function (err, result) {
 		if (!err) {
