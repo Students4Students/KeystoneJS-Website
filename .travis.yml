@@ -15,8 +15,11 @@ before_script:
 script:
   - npm run test-e2e-travis
   
-after_success:
-  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash -c "curl -NX POST http://139.59.176.9:3000/deploy --data project=jakestockwin-co-uk/students4students\&commit=$TRAVIS_COMMIT\&email=$EMAIL\&password=$PASSWORD"; fi'
+deploy:
+	provider: script
+	script: deployment/deploy.sh
+  on:
+  	condition: '"$TRAVIS_PULL_REQUEST" = "false"'
 
 cache:
   directories:
