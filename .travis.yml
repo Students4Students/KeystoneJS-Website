@@ -19,6 +19,7 @@ deploy:
   provider: script
   script: deployment/deploy.sh
   on:
+    branch: master
     condition: '"$BROWSER" = "chrome"'
 
 cache:
