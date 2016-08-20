@@ -23,6 +23,7 @@ keystone.init({
 
 	'less': 'public',
 	'static': 'public',
+	'static options': { maxAge: '30d' },
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'hbs',
