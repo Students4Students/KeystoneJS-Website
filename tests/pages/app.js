@@ -11,8 +11,8 @@ module.exports = {
 		aboutLink: '.navbar-right > li:nth-of-type(2) > a',
 		involvedLink: '.navbar-right > li:nth-of-type(3) > a',
 		blogLink: '.navbar-right > li:nth-of-type(4) > a',
-		contactLink: '.navbar-right > li:nth-of-type(5) > a',
-		applyLink: '.navbar-right > li:nth-of-type(6) > a',
+		applyLink: '.navbar-right > li:nth-of-type(5) > a',
+		contactLink: '.navbar-right > li:nth-of-type(6) > a',
 		signInLink: '.navbar-right > li:nth-of-type(7) > a',
 
 		activeLink: '.active:nth-of-type(1) > a',
