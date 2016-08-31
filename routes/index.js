@@ -31,5 +31,5 @@ exports = module.exports = function (app) {
 	app.get('/account', middleware.requireUser, routes.views.account);
 	app.post('/account', middleware.requireUser, routes.views.account);
 	app.post('/mail', routes.views.mail);
-	app.all('/api/applications/create', keystone.middleware.api,  routes.api.applications.create);
+	app.all('/api/applications/create', keystone.middleware.api, routes.api.applications.create);
 };

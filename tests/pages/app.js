@@ -12,7 +12,8 @@ module.exports = {
 		involvedLink: '.navbar-right > li:nth-of-type(3) > a',
 		blogLink: '.navbar-right > li:nth-of-type(4) > a',
 		contactLink: '.navbar-right > li:nth-of-type(5) > a',
-		signInLink: '.navbar-right > li:nth-of-type(6) > a',
+		applyLink: '.navbar-right > li:nth-of-type(6) > a',
+		signInLink: '.navbar-right > li:nth-of-type(7) > a',
 
 		activeLink: '.active:nth-of-type(1) > a',
 		activeSubLink: 'active:nth-of-type(2) > a',
@@ -40,6 +41,8 @@ module.exports = {
 			this.expect.element('@blogLink').text.to.equal('Blog');
 			this.expect.element('@contactLink').to.be.visible;
 			this.expect.element('@contactLink').text.to.equal('Contact Us');
+			this.expect.element('@applyLink').to.be.visible;
+			this.expect.element('@applyLink').text.to.equal('Apply Now');
 			this.expect.element('@signInLink').to.be.visible;
 			this.expect.element('@signInLink').text.to.equal('Sign In');
 			return this;
