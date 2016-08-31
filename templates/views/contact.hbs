@@ -81,6 +81,7 @@
                             </div>
                         </div>
                         <br>
+						<div id="apply" class="placeholder"></div>
                         <div id="success"></div>
                         <div class="row">
                             <div class="form-group col-xs-12">
@@ -90,6 +91,80 @@
                     </form>
                 </div>
 	</div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 id="application" class="text-center border">Application Form</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <form action="/api/applications/create" method="POST" name="application" id="applicationForm" novalidate>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Name</label>
+                        <input type="text" class="form-control" placeholder="Name" id="name" name="name" required data-validation-required-message="Please enter your name.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Email Address</label>
+                        <input type="email" class="form-control" placeholder="Email Address" id="email" name="email" required data-validation-required-message="Please enter your email address.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Subject</label>
+                        <input type="text" class="form-control" placeholder="Subject" id="subject" name="subject" required data-validation-required-message="Please enter the subject you are studying.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Year</label>
+                        <input type="text" class="form-control" placeholder="Year" id="year" name="year" required data-validation-required-message="What year of university are you in?">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>College</label>
+                        <input type="text" class="form-control" placeholder="College" id="college" name="college" required data-validation-required-message="Which college are you at?">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Please tell us about any experience you have teaching or working with children</label>
+                        <textarea rows="5" class="form-control" placeholder="Experience" id="experience" name="experience" required data-validation-required-message="Please tell us about any experience you have teaching or working with children."></textarea>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>What has made you interested in Students4Students?</label>
+                        <textarea rows="5" class="form-control" placeholder="Interest" id="interest" name="interest" required data-validation-required-message="What has made you interested in Students4Students?"></textarea>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Any questions for us?</label>
+                        <textarea rows="5" class="form-control" placeholder="Questions" id="questions" name="questions"></textarea>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <br>
+                <div id="success"></div>
+                <div class="row">
+                    <div class="form-group col-xs-12">
+                        <button type="submit" class="btn btn-success btn-lg">Send</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 	<div class="row hidden-xs">
                 <div class="col-xs-12">
                         <h1 class="text-center border">Social Media</h1>

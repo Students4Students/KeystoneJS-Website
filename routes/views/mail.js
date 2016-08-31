@@ -1,19 +1,18 @@
 var nodemailer = require('nodemailer');
 
-var config = {
-	host: 'smtp.zoho.com',
-	port: 465,
-	secure: true,
-	authMethod: 'LOGIN',
-	auth: {
-		user: 'noreply@jakestockwin.co.uk',
-		pass: process.env.ZOHO_PASSWORD,
-	},
-};
+var config = require('../../mailConfig.js').config;
 
 var transporter = nodemailer.createTransport(config);
 
 exports = module.exports = function (req, res) {
+
+	if (process.env.TRAVIS) {
+		// If it's travis running tests, we shouldn't send emails out.
+		console.log('Travis environment variable set, not sending email');
+		res.statusCode = 200;
+		res.end();
+		return true;
+	}
 
 	var allowedEmails = [
 		'alex.astley@students4students.org.uk',

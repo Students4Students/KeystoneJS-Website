@@ -1,6 +1,6 @@
 $(function () {
 
-	$('input,textarea').jqBootstrapValidation({
+	$('#contactForm input,#contactForm textarea').jqBootstrapValidation({
 		preventSubmit: true,
 		submitError: function ($form, event, errors) {
 			// additional error messages or events
@@ -8,11 +8,11 @@ $(function () {
 		submitSuccess: function ($form, event) {
 			event.preventDefault(); // prevent default submit behaviour
 			// get values from FORM
-			var name = $('input#name').val();
-			var email = $('input#email').val();
-			var phone = $('input#phone').val();
-			var message = $('textarea#message').val();
-			var to = $('select#to').val();
+			var name = $('#contactForm input#name').val();
+			var email = $('#contactForm input#email').val();
+			var phone = $('#contactForm input#phone').val();
+			var message = $('#contactForm textarea#message').val();
+			var to = $('#contactForm select#to').val();
 			var firstName = name; // For Success/Failure Message
 			// Check for white space in name for Success/Fail message
 			if (firstName.indexOf(' ') >= 0) {
@@ -20,12 +20,12 @@ $(function () {
 			}
 
 			// Success message
-			$('#success').html("<div class='alert alert-info'>");
-			$('#success > .alert-info').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+			$('#contactForm #success').html("<div class='alert alert-info'>");
+			$('#contactForm #success > .alert-info').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
 				.append('</button>');
-			$('#success > .alert-info')
+			$('#contactForm #success > .alert-info')
 				.append('<strong>Please wait while we try to send your message. This may take some time. </strong>');
-			$('#success > .alert-info')
+			$('#contactForm #success > .alert-info')
 				.append('</div>');
 			
 			$.ajax({
@@ -41,12 +41,12 @@ $(function () {
 				cache: false,
 				success: function () {
 					// Success message
-					$('#success').html("<div class='alert alert-success'>");
-					$('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+					$('#contactForm #success').html("<div class='alert alert-success'>");
+					$('#contactForm #success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
 						.append('</button>');
-					$('#success > .alert-success')
+					$('#contactForm #success > .alert-success')
 						.append('<strong>Your message has been sent. </strong>');
-					$('#success > .alert-success')
+					$('#contactForm #success > .alert-success')
 						.append('</div>');
 
 					// clear all fields
@@ -54,11 +54,11 @@ $(function () {
 				},
 				error: function () {
 					// Fail message
-					$('#success').html("<div class='alert alert-danger'>");
-					$('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+					$('#contactForm #success').html("<div class='alert alert-danger'>");
+					$('#contactForm #success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
 						.append('</button>');
-					$('#success > .alert-danger').append('<strong>Sorry ' + firstName + ', it seems that my mail server is not responding. Please try again later!');
-					$('#success > .alert-danger').append('</div>');
+					$('#contactForm #success > .alert-danger').append('<strong>Sorry ' + firstName + ', it seems that my mail server is not responding. Please try again later!');
+					$('#contactForm #success > .alert-danger').append('</div>');
 					// clear all fields
 					$('#contactForm').trigger('reset');
 				},
@@ -77,6 +77,6 @@ $(function () {
 
 
 /* When clicking on Full hide fail/success boxes */
-$('#name').focus(function () {
-	$('#success').html('');
+$('#contactForm #name').focus(function () {
+	$('#contactForm #success').html('');
 });

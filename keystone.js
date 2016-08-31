@@ -64,6 +64,7 @@ keystone.set('nav', {
 	people: ['committee-members', 'trustees'],
 	files: ['files', 'folders'],
 	faqs: ['tutor-faqs', 'school-faqs'],
+	applications: 'applications',
 });
 
 keystone.set('signin redirect', '/');

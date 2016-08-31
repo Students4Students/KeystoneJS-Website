@@ -22,6 +22,7 @@ exports.initLocals = function (req, res, next) {
 			{ label: 'For Schools',		subkey: 'getinvolvedschools', 	href: '/getinvolvedschools' },
 		] },
 		{ label: 'Blog',		key: 'blog',		href: '/blog' },
+		{ label: 'Apply Now',	key: 'n/a',			href: '/contact#apply' },
 		{ label: 'Contact Us',		key: 'contact',		href: '/contact' },
 	];
 
