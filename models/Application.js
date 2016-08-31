@@ -56,7 +56,7 @@ Application.schema.post('save', function (application) {
 	var mailOptions = {
 		from: '"jakestockwin.co.uk" <noreply@jakestockwin.co.uk>', // sender address
 		to: 'chair.oxford@students4students.org.uk, tutor.liaison.officer@students4students.org.uk', // list of receivers
-		subject: 'S4S Website Contact Form', // Subject line
+		subject: 'S4S New Tutor Application', // Subject line
 		html: message, // plaintext body
 	};
 
