@@ -35,6 +35,10 @@ Application.add({
 		type: Types.Textarea,
 		label: 'Comments (From S4S)',
 	},
+	status: {
+		type: Types.Select,
+		options: 'Complete, Training, Interview, Processing',
+	},
 });
 
 Application.schema.pre('save', function (next) {
@@ -71,5 +75,5 @@ Application.schema.post('save', function (application) {
 	});
 });
 
-Application.defaultColumns = 'name, email';
+Application.defaultColumns = 'name, email, status';
 Application.register();
