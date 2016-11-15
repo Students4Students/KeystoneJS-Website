@@ -16,7 +16,7 @@
     "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "eslint": "^3.6.1",
+    "eslint": "^3.10.2",
     "nightwatch": "^0.9.8"
   },
   "engines": {
