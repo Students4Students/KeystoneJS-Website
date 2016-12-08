@@ -12,7 +12,7 @@
     "handlebars": "^4.0.5",
     "keystone": "^0.3.22",
     "moment": "^2.14.1",
-    "nodemailer": "^2.5.0",
+    "nodemailer": "^2.7.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
