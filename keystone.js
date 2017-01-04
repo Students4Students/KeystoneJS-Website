@@ -41,6 +41,8 @@ keystone.init({
 	'auth': true,
 	'user model': 'User',
 	'model prefix': 's4s',
+
+	'mongo options': { server: { keepAlive: 1 } },
 });
 
 if (keystone.get('env') === 'production') {
