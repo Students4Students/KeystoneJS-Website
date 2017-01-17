@@ -76,5 +76,5 @@ Application.schema.post('save', function (application) {
 	});
 });
 
-Application.defaultColumns = 'name, email, status';
+Application.defaultColumns = 'name, email, university, status';
 Application.register();
