@@ -13,7 +13,8 @@ Application.add({
 	email: { type: Types.Email, required: true, initial: true },
 	subject: { type: String, required: true, initial: true },
 	year: { type: String, required: true, initial: true },
-	college: { type: String, required: true, initial: true },
+	college: { type: String, initial: true },
+	university: { type: String, initial: true },
 	experience: {
 		type: Types.Textarea,
 		required: true,
