@@ -1,5 +1,5 @@
 var keystone = require('keystone');
-var CommitteeMember = keystone.list('CommitteeMember');
+var OxfordCommiteeMember = keystone.list('OxfordCommiteeMember');
 exports = module.exports = function (req, res) {
 
 	var view = new keystone.View(req, res);
@@ -11,7 +11,7 @@ exports = module.exports = function (req, res) {
 
 	locals.members = [];
 	view.on('init', function (next) {
-		CommitteeMember.model.find().sort('displayOrder').exec(function (err, results) {
+		OxfordCommiteeMember.model.find().sort('displayOrder').exec(function (err, results) {
 			locals.members = results;
 			next(err);
 		});
