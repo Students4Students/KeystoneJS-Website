@@ -8,7 +8,7 @@
  */
 
 exports.create = {
-	CommitteeMember: [
+	OxfordCommitteeMember: [
 
 		{ 'name.first': 'Alex', 'name.last': 'Astley', 'position': 'Co-Founder and Director', 'description': '<p>Hi!</p>	<p>My name is Alex, I co-founded the charity with Will in early 2015 and I am in my 2nd year at Oxford studying PPE. I met Will whilst volunteering on an education project in Ghana. Although I have always been interested in education and volunteering it was in Ghana that I truly understood the power of education and the impact it can have upon both individuals and society. Aside from Students4Students I have volunteered as a swim teacher for a number of years and have also been active in championing issues effecting young people. I hope to use all of these experiences I have had to ensure Students4Students makes the most impact it can.</p>' },
 
