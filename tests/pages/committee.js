@@ -1,7 +1,7 @@
 var keystone = require('keystone');
 
 module.exports = {
-	url: 'http://' + keystone.get('host') + ':' + keystone.get('port') + '/committee',
+	url: 'http://' + keystone.get('host') + ':' + keystone.get('port') + '/oxfordcommittee',
 	elements: {
 		identifier: '#committeeIdentifier',
 		navbar: '.navbar-default',
