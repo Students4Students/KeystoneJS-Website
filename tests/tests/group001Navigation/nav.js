@@ -16,7 +16,8 @@ module.exports = {
 		browser.app.checkDropdown([
 			'What We Do',
 			'Our Journey',
-			'Meet the Committee',
+			'Meet the Oxford Committee',
+			'Meet the Durham Committee',
 			'Meet the Trustees',
 		]);
 
@@ -41,6 +42,9 @@ module.exports = {
 		browser.page.committee().waitForPageLoad();
 		browser.app.clickLink('about');
 		browser.app.clickOpenDropdownLink('fourth');
+		browser.page.committee().waitForPageLoad();
+		browser.app.clickLink('about');
+		browser.app.clickOpenDropdownLink('fifth');
 		browser.page.trustees().waitForPageLoad();
 
 		browser.app.clickLink('involved');

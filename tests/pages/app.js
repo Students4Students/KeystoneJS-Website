@@ -23,6 +23,7 @@ module.exports = {
 		secondOpenDropdownItem: '.open > ul > li:nth-of-type(2) a',
 		thirdOpenDropdownItem: '.open > ul > li:nth-of-type(3) a',
 		fourthOpenDropdownItem: '.open > ul > li:nth-of-type(4) a',
+		fifthOpenDropdownItem: '.open > ul > li:nth-of-type(5) a',
 	},
 	commands: [{
 		assertUI: function () {
