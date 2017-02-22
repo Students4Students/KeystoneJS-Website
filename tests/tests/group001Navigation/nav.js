@@ -60,6 +60,9 @@ module.exports = {
 		browser.app.clickLink('contact');
 		browser.page.contact().waitForPageLoad();
 
+		browser.app.clickLink('support');
+		browser.page.support().waitForPageLoad();
+
 		browser.app.clickLink('signIn');
 		browser.page.signin().waitForPageLoad();
 	},

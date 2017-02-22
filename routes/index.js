@@ -30,6 +30,7 @@ exports = module.exports = function (app) {
 	app.get('/durhamcommittee', routes.views.durhamcommittee);
 	app.get('/trustees', routes.views.trustees);
 	app.get('/account', middleware.requireUser, routes.views.account);
+	app.get('/support', routes.views.support);
 	app.post('/account', middleware.requireUser, routes.views.account);
 	app.post('/mail', routes.views.mail);
 	app.all('/api/applications/create', keystone.middleware.api, routes.api.applications.create);
