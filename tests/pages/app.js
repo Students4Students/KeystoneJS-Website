@@ -46,7 +46,7 @@ module.exports = {
 			this.expect.element('@applyLink').to.be.visible;
 			this.expect.element('@applyLink').text.to.equal('Apply Now');
 			this.expect.element('@supportLink').to.be.visible;
-			this.expect.element('@supportLink').text.to.equal('Apply Now');
+			this.expect.element('@supportLink').text.to.equal('Support Us');
 			this.expect.element('@signInLink').to.be.visible;
 			this.expect.element('@signInLink').text.to.equal('Sign In');
 			return this;

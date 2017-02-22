@@ -1,7 +1,7 @@
 var keystone = require('keystone');
 
 module.exports = {
-	url: 'http://' + keystone.get('host') + ':' + keystone.get('port') + '/journey',
+	url: 'http://' + keystone.get('host') + ':' + keystone.get('port') + '/support',
 	elements: {
 		identifier: '#supportIdentifier',
 		navbar: '.navbar-default',
