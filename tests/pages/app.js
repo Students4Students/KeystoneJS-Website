@@ -30,7 +30,7 @@ module.exports = {
 		assertUI: function () {
 			this.expect.element('@navbar').to.be.visible;
 			this.expect.element('@navbarBrand').to.be.visible;
-			this.expect.element('@navbarBrand').text.to.equal('Students4Students');
+			this.expect.element('@navbarBrand').text.to.equal('STUDENTS4STUDENTS');
 
 			this.expect.element('@navbarRight').to.be.visible;
 			this.expect.element('@homeLink').to.be.visible;
