@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "eslint": "^3.6.1",
-    "nightwatch": "^0.9.8"
+    "nightwatch": "^0.9.12"
   },
   "engines": {
     "node": ">=0.10.22",
