@@ -14,7 +14,7 @@ Application.add({
 	subject: { type: String, required: true, initial: true },
 	year: { type: String, required: true, initial: true },
 	college: { type: String, initial: true },
-	university: { type: String, initial: true },
+	university: { type: Types.Select, options: 'Oxford, Durham', required: true, initial: true },
 	experience: {
 		type: Types.Textarea,
 		required: true,
@@ -58,9 +58,17 @@ Application.schema.post('save', function (application) {
 	}
 	var message = 'You have recieved a new tutor application from ' + application.name + '.<br>'
 		+ ' To see the details, <a href="https://www.students4students.org.uk/keystone/applications/' + application._id + '">click here.';
+
+    var to;
+    if (this.university == "Oxford") {
+        to = 'chair.oxford@students4students.org.uk, tutor.liaison.officer@students4students.org.uk';
+    } else if (this.university == "Durham") {
+        to = 'chair.durham@students4students.org.uk, recruitment.durham@students4students.org.uk';
+    }
+
 	var mailOptions = {
 		from: '"jakestockwin.co.uk" <noreply@jakestockwin.co.uk>', // sender address
-		to: 'chair.oxford@students4students.org.uk, tutor.liaison.officer@students4students.org.uk', // list of receivers
+		to: to,
 		subject: 'S4S New Tutor Application', // Subject line
 		html: message, // plaintext body
 	};
@@ -68,7 +76,7 @@ Application.schema.post('save', function (application) {
 	transporter.sendMail(mailOptions, function (err, info) {
 		console.log('New application recieved. Sending emails');
 		if (err) {
-			console.log('Error sending email:');
+            console.log('Error sending email:');
 			console.log(err);
 		} else {
 			console.log('Message sent: ' + info.response);

@@ -1,6 +1,6 @@
 $(function () {
 
-	$('#applicationForm input,#applicationForm textarea').jqBootstrapValidation({
+	$('#applicationForm input,#applicationForm textarea, #applicationForm select').jqBootstrapValidation({
 		preventSubmit: true,
 		submitError: function ($form, event, errors) {
 			// additional error messages or events
@@ -13,6 +13,7 @@ $(function () {
 			var subject = $('#applicationForm input#subject').val();
 			var year = $('#applicationForm input#year').val();
 			var college = $('#applicationForm input#college').val();
+            var university = $('#applicationForm select#university').val();
 			var experience = $('#applicationForm textarea#experience').val();
 			var interest = $('#applicationForm textarea#interest').val();
 			var questions = $('#applicationForm textarea#questions').val();
@@ -40,6 +41,7 @@ $(function () {
 					subject: subject,
 					year: year,
 					college: college,
+                    university: university,
 					experience: experience,
 					interest: interest,
 					questions: questions
