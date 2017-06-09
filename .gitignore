@@ -38,3 +38,7 @@ node_modules
 tests/reports/*
 
 *.css
+
+# vim swp files
+# *.swp
+#
