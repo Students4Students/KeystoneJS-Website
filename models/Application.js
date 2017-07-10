@@ -14,7 +14,7 @@ Application.add({
 	subject: { type: String, required: true, initial: true },
 	year: { type: String, required: true, initial: true },
 	college: { type: String, initial: true },
-	university: { type: Types.Select, options: 'Oxford, Durham', required: true, initial: true },
+	university: { type: Types.Select, options: 'Oxford, Durham, Sandringham', required: true, initial: true },
 	experience: {
 		type: Types.Textarea,
 		required: true,
