@@ -64,6 +64,12 @@ Application.schema.post('save', function (application) {
 		to = 'chair.oxford@students4students.org.uk, tutor.liaison.officer@students4students.org.uk';
 	} else if (this.university === 'Durham') {
 		to = 'chair.durham@students4students.org.uk, recruitment.durham@students4students.org.uk';
+	} else if (this.university === 'Bristol') {
+		to = 'william.clare@students4students.org.uk';
+	} else if (this.university === 'Sandringham') {
+		to = 'alex.astley@students4students.org.uk';
+	} else {
+		to = 'william.clare@students4students.org.uk, alex.astley@students4students.org.uk';	
 	}
 
 	var mailOptions = {
