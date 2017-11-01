@@ -69,7 +69,7 @@ Application.schema.post('save', function (application) {
 	} else if (this.university === 'Sandringham') {
 		to = 'alex.astley@students4students.org.uk';
 	} else {
-		to = 'william.clare@students4students.org.uk, alex.astley@students4students.org.uk';	
+		to = 'william.clare@students4students.org.uk, alex.astley@students4students.org.uk';
 	}
 
 	var mailOptions = {
