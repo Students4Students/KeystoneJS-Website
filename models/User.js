@@ -12,6 +12,7 @@ User.add({
 	name: { type: Types.Name, required: true, index: true },
 	email: { type: Types.Email, initial: true, required: true, index: true },
 	password: { type: Types.Password, initial: true, required: true },
+	university: { type: Types.Select, options: 'Oxford, Durham, Bristol', initial: true },
 }, 'Permissions', {
 	isAdmin: { type: Boolean, label: 'Can access admin console', index: true },
 });
@@ -33,5 +34,5 @@ User.relationship({ ref: 'Post', path: 'posts', refPath: 'author' });
  * Registration
  */
 
-User.defaultColumns = 'name, email, isAdmin';
+User.defaultColumns = 'name, email, university, isAdmin';
 User.register();
