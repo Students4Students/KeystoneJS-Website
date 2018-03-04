@@ -63,7 +63,7 @@ keystone.set('routes', require('./routes'));
 keystone.set('nav', {
 	posts: ['posts', 'post-categories'],
 	users: 'users',
-	people: ['oxford-committee-members', 'oxford-tutors', 'durham-committee-members', 'durham-tutors', 'trustees'],
+	people: ['oxford-committee-members', 'oxford-tutors', 'durham-committee-members', 'durham-tutors', 'bristol-committee-members', 'bristol-tutors', 'trustees'],
 	files: ['files', 'folders'],
 	faqs: ['tutor-faqs', 'school-faqs'],
 	applications: 'applications',

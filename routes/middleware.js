@@ -14,10 +14,15 @@ exports.initLocals = function (req, res, next) {
 		{ label: 'About Us',		key: 'about',		pages: [
 			{ label: 'What We Do',		subkey: 'whatwedo',	href: '/whatwedo' 		},
 			{ label: 'Our Journey',		subkey: 'journey',		href: '/journey'	},
-			{ label: 'Meet the Oxford Committee',	subkey: 'oxfordcommittee',		href: '/oxfordcommittee' 	},
-			{ label: 'Meet the Durham Committee',	subkey: 'durhamcommittee',		href: '/durhamcommittee' 	},
 			{ label: 'Meet the Trustees',	subkey: 'trustees',		href: '/trustees' 	},
 		] },
+		{
+			label: 'Branches', key: 'branches', pages: [
+				{ label: 'Oxford',	subkey: 'oxfordbranch',		href: '/branches/oxford' 	},
+				{ label: 'Durham',	subkey: 'durhambranch',		href: '/branches/durham' 	},
+				{ label: 'Bristol',	subkey: 'bristolbranch',		href: '/branches/bristol' 	},
+			],
+		},
 		{ label: 'Get Involved',	key: 'getinvolved',	pages: [
 			{ label: 'For Tutors',		subkey: 'getinvolvedtutors',	href: '/getinvolvedtutors' },
 			{ label: 'For Schools',		subkey: 'getinvolvedschools', 	href: '/getinvolvedschools' },

@@ -9,12 +9,13 @@ module.exports = {
 
 		homeLink: '.navbar-right > li:nth-of-type(1) > a',
 		aboutLink: '.navbar-right > li:nth-of-type(2) > a',
-		involvedLink: '.navbar-right > li:nth-of-type(3) > a',
-		blogLink: '.navbar-right > li:nth-of-type(4) > a',
-		applyLink: '.navbar-right > li:nth-of-type(5) > a',
-		contactLink: '.navbar-right > li:nth-of-type(6) > a',
-		supportLink: '.navbar-right > li:nth-of-type(7) > a',
-		signInLink: '.navbar-right > li:nth-of-type(8) > a',
+		branchesLink: '.navbar-right > li:nth-of-type(3) > a',
+		involvedLink: '.navbar-right > li:nth-of-type(4) > a',
+		blogLink: '.navbar-right > li:nth-of-type(5) > a',
+		applyLink: '.navbar-right > li:nth-of-type(6) > a',
+		contactLink: '.navbar-right > li:nth-of-type(7) > a',
+		supportLink: '.navbar-right > li:nth-of-type(8) > a',
+		signInLink: '.navbar-right > li:nth-of-type(9) > a',
 
 		activeLink: '.active:nth-of-type(1) > a',
 		activeSubLink: 'active:nth-of-type(2) > a',
@@ -37,6 +38,8 @@ module.exports = {
 			this.expect.element('@homeLink').text.to.equal('Home');
 			this.expect.element('@aboutLink').to.be.visible;
 			this.expect.element('@aboutLink').text.to.equal('About Us');
+			this.expect.element('@branchesLink').to.be.visible;
+			this.expect.element('@branchesLink').text.to.equal('Branches');
 			this.expect.element('@involvedLink').to.be.visible;
 			this.expect.element('@involvedLink').text.to.equal('Get Involved');
 			this.expect.element('@blogLink').to.be.visible;

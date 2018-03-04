@@ -26,8 +26,9 @@ exports = module.exports = function (app) {
 	app.get('/getinvolvedtutors', routes.views.getinvolvedtutors);
 	app.get('/getinvolvedschools', routes.views.getinvolvedschools);
 	app.get('/contact', routes.views.contact);
-	app.get('/oxfordcommittee', routes.views.oxfordcommittee);
-	app.get('/durhamcommittee', routes.views.durhamcommittee);
+	app.get('/branches/oxford', routes.views.oxfordcommittee);
+	app.get('/branches/durham', routes.views.durhamcommittee);
+	app.get('/branches/bristol', routes.views.bristolcommittee);
 	app.get('/trustees', routes.views.trustees);
 	app.get('/account', middleware.requireUser, routes.views.account);
 	app.get('/support', routes.views.support);

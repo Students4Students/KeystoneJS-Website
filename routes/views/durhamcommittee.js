@@ -6,8 +6,8 @@ exports = module.exports = function (req, res) {
 	var locals = res.locals;
 
 	// Set locals
-	locals.section = 'about';
-	locals.subsection = 'committee';
+	locals.section = 'branches';
+	locals.subsection = 'durhambranch';
 
 	locals.members = [];
 	view.on('init', function (next) {

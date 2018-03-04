@@ -16,9 +16,14 @@ module.exports = {
 		browser.app.checkDropdown([
 			'What We Do',
 			'Our Journey',
-			'Meet the Oxford Committee',
-			'Meet the Durham Committee',
 			'Meet the Trustees',
+		]);
+
+		browser.app.clickLink('branches');
+		browser.app.checkDropdown([
+			'Oxford',
+			'Durham',
+			'Bristol',
 		]);
 
 		browser.app.clickLink('involved');
@@ -39,13 +44,17 @@ module.exports = {
 		browser.page.journey().waitForPageLoad();
 		browser.app.clickLink('about');
 		browser.app.clickOpenDropdownLink('third');
-		browser.page.committee().waitForPageLoad();
-		browser.app.clickLink('about');
-		browser.app.clickOpenDropdownLink('fourth');
-		browser.page.committee().waitForPageLoad();
-		browser.app.clickLink('about');
-		browser.app.clickOpenDropdownLink('fifth');
 		browser.page.trustees().waitForPageLoad();
+
+		browser.app.clickLink('branches');
+		browser.app.clickOpenDropdownLink('first');
+		browser.page.committee().waitForPageLoad();
+		browser.app.clickLink('branches');
+		browser.app.clickOpenDropdownLink('second');
+		browser.page.committee().waitForPageLoad();
+		browser.app.clickLink('branches');
+		browser.app.clickOpenDropdownLink('third');
+		browser.page.committee().waitForPageLoad();
 
 		browser.app.clickLink('involved');
 		browser.app.clickOpenDropdownLink('first');
