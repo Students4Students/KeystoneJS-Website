@@ -31,6 +31,7 @@ exports = module.exports = function (req, res) {
 	var message = 'You have recieved a new message from your website contact form.<br><br>'
 	+ 'Here are the details:<br><br>'
 	+ 'Name: ' + req.body.name + '<br>'
+	+ 'Email: ' + req.body.email + '<br>'
 	+ 'Phone Number: ' + req.body.phone + '<br>'
 	+ 'Message: <br><br>' + req.body.message.replace('\n', '<br>');
 
