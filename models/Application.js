@@ -61,11 +61,11 @@ Application.schema.post('save', function (application) {
 
 	var to;
 	if (this.university === 'Oxford') {
-		to = 'chair.oxford@students4students.org.uk, tutor.liaison.officer@students4students.org.uk';
+		to = 'chair.oxford@students4students.org.uk, recruitment.oxford@students4students.org.uk';
 	} else if (this.university === 'Durham') {
 		to = 'chair.durham@students4students.org.uk, recruitment.durham@students4students.org.uk';
 	} else if (this.university === 'Bristol') {
-		to = 'william.clare@students4students.org.uk';
+		to = 'chair.bristol@students4students.org.uk, recruitment.bristol@students4students.org.uk';
 	} else if (this.university === 'Sandringham') {
 		to = 'alex.astley@students4students.org.uk';
 	} else {
