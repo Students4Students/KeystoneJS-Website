@@ -15,6 +15,7 @@ exports.initLocals = function (req, res, next) {
 			{ label: 'What We Do',		subkey: 'whatwedo',	href: '/whatwedo' 		},
 			{ label: 'Our Journey',		subkey: 'journey',		href: '/journey'	},
 			{ label: 'Meet the Trustees',	subkey: 'trustees',		href: '/trustees' 	},
+			{ label: 'Safeguarding',		subkey: 'safeguarding',	href: '/safeguarding' 		},
 		] },
 		{
 			label: 'Branches', key: 'branches', pages: [

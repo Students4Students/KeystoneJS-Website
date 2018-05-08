@@ -22,6 +22,7 @@ exports = module.exports = function (app) {
 	app.get('/files', middleware.requireUser, routes.views.files);
 	app.get('/file/:file', middleware.requireUser, routes.views.fileviewer);
 	app.get('/whatwedo', routes.views.whatwedo);
+	app.get('/safeguarding', routes.views.safeguarding);
 	app.get('/journey', routes.views.journey);
 	app.get('/getinvolvedtutors', routes.views.getinvolvedtutors);
 	app.get('/getinvolvedschools', routes.views.getinvolvedschools);

@@ -17,6 +17,7 @@ module.exports = {
 			'What We Do',
 			'Our Journey',
 			'Meet the Trustees',
+			'Safeguarding',
 		]);
 
 		browser.app.clickLink('branches');
@@ -45,6 +46,9 @@ module.exports = {
 		browser.app.clickLink('about');
 		browser.app.clickOpenDropdownLink('third');
 		browser.page.trustees().waitForPageLoad();
+		browser.app.clickLink('about');
+		browser.app.clickOpenDropdownLink('fourth');
+		browser.page.safeguarding().waitForPageLoad();
 
 		browser.app.clickLink('branches');
 		browser.app.clickOpenDropdownLink('first');
